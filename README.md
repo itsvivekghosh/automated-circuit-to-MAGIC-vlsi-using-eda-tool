@@ -17,24 +17,23 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 5. Conversion Commands.
 6. About Author.
 
-## Working:
-
-<h4>
-*****************************[Input File(.sp)]*********************************************  
+## Working Process:
+```
+                                                        Input File(.sp)
  
-                                 ||
-                                 ||
-                                 ||
-                                 \/
-**************************[Layout Tool having Rules]***************************************  
- 
-                                 ||
-                                 ||
-                                 ||
-                                 \/
-**************************[Layout (.mag, .gds)]********************************************
-</h4>
+                                                             ||
+                                                             ||
+                                                             ||
+                                                             \/
+                                                    Layout Tool having Rules
 
+                                                             ||
+                                                             ||
+                                                             ||
+                                                             \/
+                                                     Layout (.mag, .gds)
+
+````
 
 ## Steps Involved :
 
