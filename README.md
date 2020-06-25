@@ -1,170 +1,128 @@
-# Automated_Circuit_To_MAGIC_VLSI
-Project Name: Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools.
+# Automated Circuit to MAGIC VLSI using Open-Source EDA Tools by Python.
 
-VLSI design flow includes system specifcation, architectural ddesign, functional & logic design, circuit design, physical design, fabrication, pacakging & testing, chip. In physical esign process like  layouting, routing, placement, etc are involved.
-This project aims to convert a circuit into its MAGIC Layout format. MAGIC software is a open source EDA tool which is used for making layout of circuit. 
+__Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by __IITG, Guwahati__.<br>
+<i>This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. </i>
 
-Basically if we are representing a circuit into code format then using some coding algorithm we can implement its magic VLSI layout.
-So, here circuit netlist,design rules, librecell layout are used to generate output.
+<h3>About MAGIC Layout Tool: </h3>
+<p>MAGIC is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow. <a href="http://opencircuitdesign.com/magic/">More info</a></p>
 
-Basic algorithm is :  
+__Our Task:__
+Our Task is to generate a VLSI Layout as an Output when given any Input Circuit. We can use Netlist, DRS files, LibreCell layouts as inputs to the file thus generating a VLSI Layout using the Algorithm.
+
+__Working:__
+
+<h4>
+Input File(.sp)  =====>  Layout Tool having Rules  ====>  Layout (.mag, .gds)
+</h4>
 
 
-Input files [Spice Netlist + Design Rules]   ----->   Librecell Layout as conversion tool    ----->    Output i.e layout [GDS,LEF,MAG]
+__Steps Involved :__
 
-We can generate spice netlist of any circuit using circuit design tools,open source EDA tools. Design rules are the rules which are associated with ƛ rule used in stick diagram, layout. Stick diagram represents layer information through color code. Layout consists of contacts, metal, polysilicon, etc. This layers are represented using color code in stick diagram.
+- Installing Necessary Tools and Softwares
+- Creating a Virtual Envionment
+- Installing LibreCell Tool using git Command and MAGIC Tool
+- Applying DRC Rules
+- Generating the Output file
 
-## Let's Start
 
-Steps Involved : 
+## Downloading Our Requirements 
 
-- Installing Python3, Ngspice, Z3 Solver
-- Creating a python virtual environment
-- Installing librecell using git
-- Applying Conversion Commands
-- Installing MAGIC To see Layout
+__For Ubuntu:__
 
-### Downloading Python3, Ngspice, Z3 Solver 
-
-For ubuntu, using terminal we will download required tools.
-Command to install ngspice & install  is : 
+Install NgSpice Tool using: 
 ```
 sudo pacman -S install ngspice z3
 ```
 
-To install python3 use following command : 
+Install python using: 
 ```
 sudo apt-get install python3
 ```
 
-We will also require MAGIC software to check/read Layout(.mag file)
-To download MAGIC :
+Install MAGIC Tool using:
 
 ```
 sudo apt-get install magic
 ```
 
-To check whether all tools are installed : Try for checkpoint
+## GETTING INTO PROCESS:
 
-Checkpoint1 : Type `ngspice` for ngspice; Give command `z3 --help` for z3 solver ; Give command `python3` for python.
-
-Now next we need to work on python virtual environment :
-Using following commands we can work on python virtual envrionment
+__Setting up the Virtual Envirnment:__<br>
+Using commands we set up the virtual environment<br>
+For installing Virtual Environment we can using the command:
+`py -m pip install --user virtualenv`
 
 ```
-python3 -m venv my-librecell-env
-
-source ./my-librecell-env/bin/activate
+python3 -m venv myProject
 ```
-### Installing librecell
 
-Now we need to install librecell from git .
-Commands to download & install :
+__INSTALLING LIBRECELL:__
+
+Inorder to Download & Install LibreCell from git, use this command:
 ```
 git clone https://codeberg.org/tok/librecell.git
+
 cd librecell
 ```
 
 ```
 cd librecell-common
+
 python3 setup.py develop
+
 cd ..
 ```
 
 ```
 cd librecell-layout
+
 python3 setup.py develop
+
 cd ..
 ```
 
 ```
 cd librecell-lib
+
 python3 setup.py develop
+
 cd ..
 ```
-
-Checkpoint 2: 
-To make sure that llibrecell is installed or not use command :
+Verify LibreCell is Properly Installed or Not by using:
 `librecell --h`
 
-If terminal is showing information or help commands then librecell is installed.
+For more details for installing please visit <a href="https://codeberg.org/tok/librecell#:~:text=Installing%20from%20git&text=Install%20from%20git%3A,setup.py%20develop%20cd%20..">this</a> Link
 
-Next we need to deal with actual files that is spice netlist files, tech files, directories,etc.
- We need to make directory in lbrecell layout folder.
- Make sure that you are in librecell folder right now [From librecell folder we will go to librecell-layout]
+<h3>Make a Project Directory by using:</h3>
+ 'mkdir /myProject'
  
- `cd librecell-layout`
  
- Make directory :
- 'mkdir /tmp/mylibrary'
+ ## CONVERSION COMMAND:
  
- ### Conversion command
- 
+ The Running Command Can be used as:
  ```
- lclayout --output-dir [Here your output will be stored] --tech [design_tech_file.py] --netlist [Spice_netlist.sp] --cell [Cell_Name]
+ lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
  ````
  
- For example : Use dummy_tech.py file as design tech file.Use AND2X1.sp OR LATCH.sp as spice netlist file. Use corresponding cell name ex: --cell AND2X1   OR   --cell LATCH.
- 
- File name must be with location of file. Ex : If my all files are stored in Desktop then I will use 
+The LATCH.sp file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  __For Example:__
  ```
- lclayout --output-dir /home/user/Desktop --tech /home/user/Desktop/librecell_tech.py --netlist /home/user/Desktop/cells.sp --cell LATCH
- ```
- OR 
- 
- ```
- lclayout --output-dir /tmp/mylibrary --tech examples/dummy_tech.py --netlist examples/cells.sp --cell AND2X1
- 
+ lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/MyProjects/LATCH/librecell_tech.py --netlist /home/user/Desktop/MyProjects/LATCH.sp --cell LATCH
  ```
  
- ### MAGIC Layout 
+ ## MAGIC LAYOUT:  
  
- Checkpoint 3 : To make sure MAGIC is installed make a file of magic using `magic checkpoint3.mag`
- If MAGIC with blank project is opened then MAGIC is installed.
+ __Initializing LATCH:__ We can run `magic <MAG_File>.mag` figure out MAGIC is installed in our System or Not.
+ For more information about the error generated, visit <a href="https://www.systutorials.com/docs/linux/man/5-mag/">this</a> page
  
- i. AND2X1 : I have used AND2X1 Sspice netlist & cell to generate layout of AND2X1.
- 
- Use command to generate layout 
- 
- ```
- magic AND2X1.mag
- 
- ```
- 
- Output AND2X1 :
- 
- <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Commands_Output_SS_AND2X1.png">
- 
- ii. LATCH : I have used LATCH spice netlist & cell name to generate layout of LATCH.
- 
+ Use this command to generate the layout:
  ```
  magic LATCH.mag
- 
  ```
  
- Output LATCH:
+ <h6>Output: </h6>
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
- [Hit CTRL if cursor is blinking again & again & Make sure that ouput gd files is stored on Desktop]
- 
- ### Input & Output Files
- 
- So using librecell we get to know that we can convert spice netlist to its layout.
- 
- Input files used :   
- - Spice netlist [.sp]
- - Tech file [.py]
- - cell name
-                      
- Output Files obtained :  
- - Graphic Database System File .gds]
- - Library Exchange Format [.lef]
- 
- ## Contact Information 
- 
- - Vivek Kumar Ghosh, B.Tech [Computer Science Engineering], Uttaranchal University, Dehradun. soapmactevis1@gmail.com
- - Philipp Guhring, Software Architect at Libresilicon Association. pg@futureware.at
- - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalpghosh@gmail.com
- - Dr. Gaurav Trivedi, Co-principal & Associative Professor, EEE Department, IIT Guwahati. trivedi@iitg.ac.in
-# automated-circuit-to-MAGIC-vlsi-using-eda-tool
+__@About Author:__<br>
+ <p>Vivek Kumar Ghosh, B.Tech (Computer Science Engineering), Uttaranchal University, Dehradun. 
+ E-mail:- soapmactevis1@gmail.com</p>
