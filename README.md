@@ -1,32 +1,31 @@
 # Automated_Circuit_To_MAGIC_VLSI
-Project Name: Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools.
+Project Name: Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by IIT Guwahati.<br>
+This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. 
 
-VLSI design flow includes system specifcation, architectural ddesign, functional & logic design, circuit design, physical design, fabrication, pacakging & testing, chip. In physical esign process like  layouting, routing, placement, etc are involved.
-This project aims to convert a circuit into its MAGIC Layout format. MAGIC software is a open source EDA tool which is used for making layout of circuit. 
+<h5>MAGIC software is a open source EDA tool which is used for making layout of circuit. </h5>
 
 Basically if we are representing a circuit into code format then using some coding algorithm we can implement its magic VLSI layout.
 So, here circuit netlist,design rules, librecell layout are used to generate output.
 
-Basic algorithm is :  
+Working:
 
-
-Input files [Spice Netlist + Design Rules]   ----->   Librecell Layout as conversion tool    ----->    Output i.e layout [GDS,LEF,MAG]
+Input files [Spice Netlist + Design Rules]   ----->   Librecell Layout as Conversion tool    ----->    Output i.e Layout [GDS,LEF,MAG]
 
 We can generate spice netlist of any circuit using circuit design tools,open source EDA tools. Design rules are the rules which are associated with ƛ rule used in stick diagram, layout. Stick diagram represents layer information through color code. Layout consists of contacts, metal, polysilicon, etc. This layers are represented using color code in stick diagram.
 
-## Let's Start
 
-Steps Involved : 
+__Steps Involved :__
 
-- Installing Python3, Ngspice, Z3 Solver
-- Creating a python virtual environment
-- Installing librecell using git
-- Applying Conversion Commands
+- Installing Python3, Ngspice, Z3Spice
+- Creating a python virtual environment using `py -m pip install --user virtualenv`
+- Installing librecell using git (Git Link in the description)
+- Applying Rules Commands 
 - Installing MAGIC To see Layout
 
 ### Downloading Python3, Ngspice, Z3 Solver 
 
-For ubuntu, using terminal we will download required tools.
+__For Ubuntu:__
+
 Command to install ngspice & install  is : 
 ```
 sudo pacman -S install ngspice z3
@@ -37,18 +36,21 @@ To install python3 use following command :
 sudo apt-get install python3
 ```
 
-We will also require MAGIC software to check/read Layout(.mag file)
 To download MAGIC :
 
 ```
 sudo apt-get install magic
 ```
 
-To check whether all tools are installed : Try for checkpoint
+To check whether all tools are installed:
 
-Checkpoint1 : Type `ngspice` for ngspice; Give command `z3 --help` for z3 solver ; Give command `python3` for python.
+__Checkpoint1 :__
+- Type `ngspice` for ngspice; 
+- Give command `z3 --help` for z3 solver;
+- Give command `python3` for python.
 
-Now next we need to work on python virtual environment :
+
+__Setting up the Virtual Envirnment:__
 Using following commands we can work on python virtual envrionment
 
 ```
@@ -56,7 +58,8 @@ python3 -m venv my-librecell-env
 
 source ./my-librecell-env/bin/activate
 ```
-### Installing librecell
+
+### Installing LibreCell
 
 Now we need to install librecell from git .
 Commands to download & install :
@@ -83,8 +86,9 @@ python3 setup.py develop
 cd ..
 ```
 
-Checkpoint 2: 
-To make sure that llibrecell is installed or not use command :
+__Checkpoint 2:_
+
+To make sure that Librecell is installed or not use command :
 `librecell --h`
 
 If terminal is showing information or help commands then librecell is installed.
@@ -166,5 +170,4 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  - Vivek Kumar Ghosh, B.Tech [Computer Science Engineering], Uttaranchal University, Dehradun. soapmactevis1@gmail.com
  - Philipp Guhring, Software Architect at Libresilicon Association. pg@futureware.at
  - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalpghosh@gmail.com
- - Dr. Gaurav Trivedi, Co-principal & Associative Professor, EEE Department, IIT Guwahati. trivedi@iitg.ac.in
 # automated-circuit-to-MAGIC-vlsi-using-eda-tool
