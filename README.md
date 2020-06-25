@@ -9,14 +9,34 @@ __Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA T
 __Our Task:__
 Our Task is to generate a VLSI Layout as an Output when given any Input Circuit. We can use Netlist, DRS files, LibreCell layouts as inputs to the file thus generating a VLSI Layout using the Algorithm.
 
-__Working:__
+# TABLE OF CONTENT:
+1. Working
+2. Steps Involved
+3. Downloading Our Requirements.
+4. Getting Into Process.
+5. Conversion Commands.
+6. About Author.
+
+## Working:
 
 <h4>
-Input File(.sp)  =====>  Layout Tool having Rules  ====>  Layout (.mag, .gds)
+*****************************[Input File(.sp)]*********************************************  
+ 
+                                 ||
+                                 ||
+                                 ||
+                                 \/
+**************************[Layout Tool having Rules]***************************************  
+ 
+                                 ||
+                                 ||
+                                 ||
+                                 \/
+**************************[Layout (.mag, .gds)]********************************************
 </h4>
 
 
-__Steps Involved :__
+## Steps Involved :
 
 - Installing Necessary Tools and Softwares
 - Creating a Virtual Envionment
@@ -97,7 +117,7 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
  `mkdir /myProject`
  
  
- ## CONVERSION COMMAND:
+ ## CONVERSION COMMANDS:
  
  The Running Command Can be used as:
  ```
@@ -123,6 +143,6 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
-__@About Author:__<br>
+__About Author:__<br>
  <p>`Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. 
  E-mail:- `soapmactevis1@gmail.com`</p>
