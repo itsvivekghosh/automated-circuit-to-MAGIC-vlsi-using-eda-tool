@@ -11,7 +11,7 @@ So, here circuit netlist,design rules, librecell layout are used to generate out
 __Working:__
 
 <h4>
-__Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)__
+Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)
 </h4>
 
 __Steps Involved :__
@@ -22,7 +22,7 @@ __Steps Involved :__
 - Applying Rules Commands 
 - Installing MAGIC tool.
 
-### Downloading Python3, Ngspice, Z3 Solver 
+## Downloading Python3, Ngspice, Z3 Solver 
 
 __For Ubuntu:__
 
@@ -60,7 +60,7 @@ python3 -m venv myProject
 source ./myProject/bin/activate
 ```
 
-### Installing LibreCell
+## Installing LibreCell
 
 Now we need to install librecell from git .
 Commands to download & install :
@@ -107,7 +107,7 @@ We need to make a seperate directory for librecell folder if not present else we
  Make directory :
  'mkdir /tmp/myProjectDir'
  
- ### Conversion command
+ ## Conversion command
  
  ```
  lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
@@ -124,10 +124,9 @@ We need to make a seperate directory for librecell folder if not present else we
  
  ```
  lclayout --output-dir /tmp/mylibrary --tech examples/dummy_tech.py --netlist examples/cells.sp --cell AND2X1
- 
  ```
  
- ### MAGIC Layout 
+ ## MAGIC LAYOUT:  
  
  __Checkpoint 3 :__ To make sure MAGIC is installed make a file of magic using `magic checkpoint3.mag`
  If MAGIC with blank project is opened then MAGIC is installed.
@@ -154,7 +153,7 @@ We need to make a seperate directory for librecell folder if not present else we
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
- ### Input & Output Files:
+ ## Input & Output Files:
  We can use Spice Netlist Files to form a Layout by using a Cell Name<br>
  
  Input files used :   
@@ -166,7 +165,7 @@ We need to make a seperate directory for librecell folder if not present else we
  - Graphic Database System File .gds]
  - Library Exchange Format [.lef]
  
- ## Contact Information 
+ ### Contact Information 
  
  - Vivek Kumar Ghosh, B.Tech [Computer Science Engineering], Uttaranchal University, Dehradun. soapmactevis1@gmail.com
  - Philipp Guhring, Software Architect at Libresilicon Association. pg@futureware.at
