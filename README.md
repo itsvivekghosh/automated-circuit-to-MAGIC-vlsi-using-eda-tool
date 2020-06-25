@@ -133,7 +133,7 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  
  Output AND2X1 :
  
- <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Commands_Output_SS_AND2X1.png">
+ <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Output_AND2X1_SS.png">
  
  ii. LATCH : I have used LATCH spice netlist & cell name to generate layout of LATCH.
  
