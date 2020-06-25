@@ -1,6 +1,6 @@
 # Automated_Circuit_To_MAGIC_VLSI
-Project Name: Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by IIT Guwahati.<br>
-This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. 
+__Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by IIT Guwahati.<br>
+<i>This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. </i>
 
 <h5>MAGIC software is a open source EDA tool which is used for making layout of circuit. </h5>
 
@@ -17,7 +17,7 @@ We can generate spice netlist of any circuit using circuit design tools,open sou
 __Steps Involved :__
 
 - Installing Python3, Ngspice, Z3Spice
-- Creating a python virtual environment using `py -m pip install --user virtualenv`
+- Creating a python virtual environment
 - Installing librecell using git (Git Link in the description)
 - Applying Rules Commands 
 - Installing MAGIC To see Layout
@@ -44,7 +44,7 @@ sudo apt-get install magic
 
 To check whether all tools are installed:
 
-__Checkpoint1 :__
+__Checkpoint 1 :__
 - Type `ngspice` for ngspice; 
 - Give command `z3 --help` for z3 solver;
 - Give command `python3` for python.
@@ -52,11 +52,13 @@ __Checkpoint1 :__
 
 __Setting up the Virtual Envirnment:__
 Using following commands we can work on python virtual envrionment
+`py -m pip install --user virtualenv`
 
 ```
-python3 -m venv my-librecell-env
 
-source ./my-librecell-env/bin/activate
+python3 -m venv myProject
+
+source ./myProject/bin/activate
 ```
 
 ### Installing LibreCell
@@ -100,7 +102,7 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  `cd librecell-layout`
  
  Make directory :
- 'mkdir /tmp/mylibrary'
+ 'mkdir /tmp/myProjectDir'
  
  ### Conversion command
  
