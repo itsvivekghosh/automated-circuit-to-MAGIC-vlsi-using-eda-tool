@@ -143,5 +143,5 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
 __About Author:__<br>
- <p>`Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. 
+ <p>`Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
  E-mail:- `soapmactevis1@gmail.com`</p>
