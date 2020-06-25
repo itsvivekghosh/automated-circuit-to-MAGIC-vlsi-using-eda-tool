@@ -104,7 +104,7 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  lclayout --output-dir [Here your output will be stored] --tech [design_tech_file.py] --netlist [Spice_netlist.sp] --cell [Cell_Name]
  ````
  
- For example : Use dummy_tech.py file as design tech file.Use AND2X1.sp OR AND4.sp as spice netlist file. Use corresponding cell name ex: --cell AND2X1   OR   --cell LATCH.
+ For example : Use dummy_tech.py file as design tech file.Use AND2X1.sp OR LATCH.sp as spice netlist file. Use corresponding cell name ex: --cell AND2X1   OR   --cell LATCH.
  
  File name must be with location of file. Ex : If my all files are stored in Desktop then I will use 
  ```
@@ -135,7 +135,7 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Commands_Output_SS_AND2X1.png">
  
- ii. AND4 : I have used AND4 spice netlist & cell name to generate layout of AND4.
+ ii. LATCH : I have used LATCH spice netlist & cell name to generate layout of LATCH.
  
  ```
  magic LATCH.mag
