@@ -113,7 +113,8 @@ Verify LibreCell is Properly Installed or Not by using:
 For more details for installing please visit <a href="https://codeberg.org/tok/librecell#:~:text=Installing%20from%20git&text=Install%20from%20git%3A,setup.py%20develop%20cd%20..">this</a> Link
 
 <h3>Make a Project Directory by using:</h3>
- `mkdir /myProject`
+
+ `mkdir/myProject`
  
  
  ## 5. CONVERSION COMMANDS:
@@ -142,6 +143,6 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
-__6. About Author:__<br>
- <p>`Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
- E-mail:- `soapmactevis1@gmail.com`</p>
+## 6. About Author:
+ `Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
+ E-mail:- `soapmactevis1@gmail.com`
