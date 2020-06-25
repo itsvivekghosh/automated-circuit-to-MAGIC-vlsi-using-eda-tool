@@ -48,12 +48,12 @@ Verify all installed softwares and tools by using:
 - Give command `python3` for python.
 
 
-__Setting up the Virtual Envirnment:__
-Using following commands we can work on python virtual envrionment
+__Setting up the Virtual Envirnment:__<br>
+Using commands we set up the virtual environment<br>
+For installing Virtual Environment we can using the command:<br>
 `py -m pip install --user virtualenv`
 
 ```
-
 python3 -m venv myProject
 
 source ./myProject/bin/activate
@@ -63,6 +63,7 @@ source ./myProject/bin/activate
 
 Now we need to install librecell from git .
 Commands to download & install :
+
 ```
 git clone https://codeberg.org/tok/librecell.git
 cd librecell
@@ -92,7 +93,6 @@ Verify LibreCell is installed use :
 If terminal is showing information or `--help` command then librecell is installed.
 
 We need to make a seperate directory for librecell folder if not present else we have to change the directory by using:
- 
  `cd librecell-layout`
  
  
@@ -146,8 +146,6 @@ We need to make a seperate directory for librecell folder if not present else we
  Output LATCH:
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
- 
- [Hit CTRL if cursor is blinking again & again & Make sure that ouput gd files is stored on Desktop]
  
  ### Input & Output Files:
  
