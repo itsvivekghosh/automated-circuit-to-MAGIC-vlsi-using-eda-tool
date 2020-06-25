@@ -2,49 +2,47 @@
 __Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by IIT Guwahati.<br>
 <i>This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. </i>
 
-<h5>MAGIC software is a open source EDA tool which is used for making layout of circuit. </h5>
+<h3>About MAGIC:</h3>
+<p>Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow. </p>
 
 Basically if we are representing a circuit into code format then using some coding algorithm we can implement its magic VLSI layout.
 So, here circuit netlist,design rules, librecell layout are used to generate output.
 
-Working:
+__Working:__
 
-Input files [Spice Netlist + Design Rules]   ----->   Librecell Layout as Conversion tool    ----->    Output i.e Layout [GDS,LEF,MAG]
-
-We can generate spice netlist of any circuit using circuit design tools,open source EDA tools. Design rules are the rules which are associated with ƛ rule used in stick diagram, layout. Stick diagram represents layer information through color code. Layout consists of contacts, metal, polysilicon, etc. This layers are represented using color code in stick diagram.
+Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)
 
 
 __Steps Involved :__
 
-- Installing Python3, Ngspice, Z3Spice
-- Creating a python virtual environment
+- Installing yython3, NgSpice, Z3Spice
+- Preparing a python virtual environment
 - Installing librecell using git (Git Link in the description)
 - Applying Rules Commands 
-- Installing MAGIC To see Layout
+- Installing MAGIC tool
 
 ### Downloading Python3, Ngspice, Z3 Solver 
 
 __For Ubuntu:__
 
-Command to install ngspice & install  is : 
+Command to install NgSpice software : 
 ```
 sudo pacman -S install ngspice z3
 ```
 
-To install python3 use following command : 
+To install python3 : 
 ```
 sudo apt-get install python3
 ```
 
-To download MAGIC :
+To install MAGIC software:
 
 ```
 sudo apt-get install magic
 ```
 
-To check whether all tools are installed:
+Verify all installed softwares and tools by using:
 
-__Checkpoint 1 :__
 - Type `ngspice` for ngspice; 
 - Give command `z3 --help` for z3 solver;
 - Give command `python3` for python.
@@ -88,18 +86,15 @@ python3 setup.py develop
 cd ..
 ```
 
-__Checkpoint 2:_
-
-To make sure that Librecell is installed or not use command :
+Verify LibreCell is installed use :
 `librecell --h`
 
-If terminal is showing information or help commands then librecell is installed.
+If terminal is showing information or `--help` command then librecell is installed.
 
-Next we need to deal with actual files that is spice netlist files, tech files, directories,etc.
- We need to make directory in lbrecell layout folder.
- Make sure that you are in librecell folder right now [From librecell folder we will go to librecell-layout]
+We need to make a seperate directory for librecell folder if not present else we have to change the directory by using:
  
  `cd librecell-layout`
+ 
  
  Make directory :
  'mkdir /tmp/myProjectDir'
@@ -128,7 +123,7 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  Checkpoint 3 : To make sure MAGIC is installed make a file of magic using `magic checkpoint3.mag`
  If MAGIC with blank project is opened then MAGIC is installed.
  
- i. AND2X1 : I have used AND2X1 Sspice netlist & cell to generate layout of AND2X1.
+ __1. AND2X1 : I have used AND2X1 Sspice netlist & cell to generate layout of AND2X1.__
  
  Use command to generate layout 
  
@@ -141,7 +136,7 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Output_AND2X1_SS.png">
  
- ii. LATCH : I have used LATCH spice netlist & cell name to generate layout of LATCH.
+ __2. LATCH : I have used LATCH spice netlist & cell name to generate layout of LATCH.__
  
  ```
  magic LATCH.mag
@@ -154,14 +149,14 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  
  [Hit CTRL if cursor is blinking again & again & Make sure that ouput gd files is stored on Desktop]
  
- ### Input & Output Files
+ ### Input & Output Files:
  
  So using librecell we get to know that we can convert spice netlist to its layout.
  
  Input files used :   
  - Spice netlist [.sp]
  - Tech file [.py]
- - cell name
+ - cell Name (LATCH, AND4, etc.)
                       
  Output Files obtained :  
  - Graphic Database System File .gds]
@@ -172,4 +167,3 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  - Vivek Kumar Ghosh, B.Tech [Computer Science Engineering], Uttaranchal University, Dehradun. soapmactevis1@gmail.com
  - Philipp Guhring, Software Architect at Libresilicon Association. pg@futureware.at
  - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalpghosh@gmail.com
-# automated-circuit-to-MAGIC-vlsi-using-eda-tool
