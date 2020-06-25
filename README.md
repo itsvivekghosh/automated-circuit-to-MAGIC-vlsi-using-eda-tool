@@ -17,7 +17,7 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 5. Conversion Commands.
 6. About Author.
 
-## Working Process:
+## 1. Working Process:
 ```
                                                         Input File(.sp)
  
@@ -35,7 +35,7 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 
 ````
 
-## Steps Involved :
+## 2. Steps Involved :
 
 - Installing Necessary Tools and Softwares
 - Creating a Virtual Envionment
@@ -44,7 +44,7 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 - Generating the Output file
 
 
-## Downloading Our Requirements 
+## 3. Downloading Our Requirements 
 
 __For Ubuntu:__
 
@@ -64,7 +64,7 @@ Install MAGIC Tool using:
 sudo apt-get install magic
 ```
 
-## GETTING INTO PROCESS:
+## 4. GETTING INTO PROCESS:
 
 __Setting up the Virtual Envirnment:__<br>
 Using commands we set up the virtual environment<br>
@@ -116,7 +116,7 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
  `mkdir /myProject`
  
  
- ## CONVERSION COMMANDS:
+ ## 5. CONVERSION COMMANDS:
  
  The Running Command Can be used as:
  ```
@@ -142,6 +142,6 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
-__About Author:__<br>
+__6. About Author:__<br>
  <p>`Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
  E-mail:- `soapmactevis1@gmail.com`</p>
