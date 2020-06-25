@@ -16,11 +16,11 @@ __Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)__
 
 __Steps Involved :__
 
-- Installing yython3, NgSpice, Z3Spice
+- Installing python3, NgSpice, Z3 Solver
 - Preparing a python virtual environment
 - Installing librecell using git (Git Link in the description)
 - Applying Rules Commands 
-- Installing MAGIC tool
+- Installing MAGIC tool.
 
 ### Downloading Python3, Ngspice, Z3 Solver 
 
@@ -36,7 +36,7 @@ To install python3 :
 sudo apt-get install python3
 ```
 
-To install MAGIC software:
+To install MAGIC Tool:
 
 ```
 sudo apt-get install magic
@@ -67,24 +67,31 @@ Commands to download & install :
 
 ```
 git clone https://codeberg.org/tok/librecell.git
+
 cd librecell
 ```
 
 ```
 cd librecell-common
+
 python3 setup.py develop
+
 cd ..
 ```
 
 ```
 cd librecell-layout
+
 python3 setup.py develop
+
 cd ..
 ```
 
 ```
 cd librecell-lib
+
 python3 setup.py develop
+
 cd ..
 ```
 
@@ -103,12 +110,13 @@ We need to make a seperate directory for librecell folder if not present else we
  ### Conversion command
  
  ```
- lclayout --output-dir [Here your output will be stored] --tech [design_tech_file.py] --netlist [Spice_netlist.sp] --cell [Cell_Name]
+ lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
  ````
  
- For example : Use dummy_tech.py file as design tech file.Use AND2X1.sp OR LATCH.sp as spice netlist file. Use corresponding cell name ex: --cell AND2X1   OR   --cell LATCH.
+ I have used dummy_tech.py file as Design file. Using AND2X1.sp OR LATCH.sp as Spice Netlist File. We can use --cell AND2X1  OR   --cell LATCH.
+ File name must be with location of file.<br>
  
- File name must be with location of file. Ex : If my all files are stored in Desktop then I will use 
+ __Example:__ The Project Directory is in Desktop
  ```
  lclayout --output-dir /home/user/Desktop --tech /home/user/Desktop/librecell_tech.py --netlist /home/user/Desktop/cells.sp --cell LATCH
  ```
@@ -121,7 +129,7 @@ We need to make a seperate directory for librecell folder if not present else we
  
  ### MAGIC Layout 
  
- Checkpoint 3 : To make sure MAGIC is installed make a file of magic using `magic checkpoint3.mag`
+ __Checkpoint 3 :__ To make sure MAGIC is installed make a file of magic using `magic checkpoint3.mag`
  If MAGIC with blank project is opened then MAGIC is installed.
  
  __1. AND2X1 : I have used AND2X1 Spice Netlist & cell to generate layout of AND2X1.__
@@ -132,7 +140,7 @@ We need to make a seperate directory for librecell folder if not present else we
  magic AND2X1.mag
  ```
  
- Output AND2X1 :
+ <h6>Output AND2X1 :</h6>
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Output_AND2X1_SS.png">
  
@@ -142,13 +150,12 @@ We need to make a seperate directory for librecell folder if not present else we
  magic LATCH.mag
  ```
  
- Output LATCH:
+ <h6>Output LATCH:</h6>
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
  ### Input & Output Files:
- 
- So using librecell we get to know that we can convert spice netlist to its layout.
+ We can use Spice Netlist Files to form a Layout by using a Cell Name<br>
  
  Input files used :   
  - Spice netlist [.sp]
