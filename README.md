@@ -94,7 +94,7 @@ Verify LibreCell is Properly Installed or Not by using:
 For more details for installing please visit <a href="https://codeberg.org/tok/librecell#:~:text=Installing%20from%20git&text=Install%20from%20git%3A,setup.py%20develop%20cd%20..">this</a> Link
 
 <h3>Make a Project Directory by using:</h3>
- 'mkdir /myProject'
+ `mkdir /myProject`
  
  
  ## CONVERSION COMMAND:
@@ -104,7 +104,7 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
  lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
  ````
  
-The LATCH.sp file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  __For Example:__
+The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  <br>__For Example:__
  ```
  lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/MyProjects/LATCH/librecell_tech.py --netlist /home/user/Desktop/MyProjects/LATCH.sp --cell LATCH
  ```
@@ -124,5 +124,5 @@ The LATCH.sp file is used as an Spice NetList input file. Bu using `--cell LATCH
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
 __@About Author:__<br>
- <p>Vivek Kumar Ghosh, B.Tech (Computer Science Engineering), Uttaranchal University, Dehradun. 
- E-mail:- soapmactevis1@gmail.com</p>
+ <p>`Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. 
+ E-mail:- `soapmactevis1@gmail.com`</p>
