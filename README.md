@@ -1,18 +1,22 @@
-# Automated_Circuit_To_MAGIC_VLSI
+# Automated Circuit to MAGIC VLSI using Open-Source EDA Tools by Python.
+
 __Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by __IITG, Guwahati__.<br>
 <i>This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. </i>
 
 <h3>About MAGIC Layout Tool: </h3>
-<p>MAGIC is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow. </p>
+<p>MAGIC is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow. <a href="http://opencircuitdesign.com/magic/">More info</a></p>
 
+__Our Task:__
 Basically if we are representing a circuit into code format then using some coding algorithm we can implement its magic VLSI layout.
 So, here circuit netlist,design rules, librecell layout are used to generate output.
+
 
 __Working:__
 
 <h4>
-Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)
+Input File  =====>  Layout Tool having Rules  ====>  Layout (.mag, .gds)
 </h4>
+
 
 __Steps Involved :__
 
@@ -22,7 +26,8 @@ __Steps Involved :__
 - Applying Rules Commands 
 - Installing MAGIC tool.
 
-## Downloading Python3, Ngspice, Z3 Solver 
+
+## Downloading Our Requirements 
 
 __For Ubuntu:__
 
@@ -60,7 +65,7 @@ python3 -m venv myProject
 source ./myProject/bin/activate
 ```
 
-## Installing LibreCell
+## INSTALLING LIBRECELL
 
 Now we need to install librecell from git .
 Commands to download & install :
@@ -107,7 +112,7 @@ We need to make a seperate directory for librecell folder if not present else we
  Make directory :
  'mkdir /tmp/myProjectDir'
  
- ## Conversion command
+ ## CONVERSION COMMAND:
  
  ```
  lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
@@ -133,18 +138,19 @@ We need to make a seperate directory for librecell folder if not present else we
  
  __1. AND2X1 : I have used AND2X1 Spice Netlist & cell to generate layout of AND2X1.__
  
- Use command to generate layout 
+ Use this command to generate the layout:
  
  ```
  magic AND2X1.mag
  ```
  
- <h6>Output AND2X1 :</h6>
+ <h6>Output AND2X1:</h6>
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Output_AND2X1_SS.png">
  
  __2. LATCH : I have used LATCH Spice Netlist & cell name to generate layout of LATCH.__
  
+ Use this command to generate the layout:
  ```
  magic LATCH.mag
  ```
@@ -158,14 +164,14 @@ We need to make a seperate directory for librecell folder if not present else we
  
  Input files used :   
  - Spice netlist [.sp]
- - Tech file [.py]
- - cell Name (LATCH, AND4, etc.)
+ - Python file [.py]
+ - Cell Name (LATCH, AND4, etc.)
                       
  Output Files obtained :  
- - Graphic Database System File .gds]
+ - Graphic Database System File [.gds]
  - Library Exchange Format [.lef]
  
- ### Contact Information 
+ ## Contact Information 
  
  - Vivek Kumar Ghosh, B.Tech [Computer Science Engineering], Uttaranchal University, Dehradun. soapmactevis1@gmail.com
  - Philipp Guhring, Software Architect at Libresilicon Association. pg@futureware.at
