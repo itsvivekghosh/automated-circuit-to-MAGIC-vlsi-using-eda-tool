@@ -17,25 +17,25 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 5. Conversion Commands.
 6. About Author.
 
-## 1. Working Process:
+## 1. WORKING PROCESS:
 ```
-                                                        Input File(.sp)
- 
-                                                             ||
-                                                             ||
-                                                             ||
-                                                             \/
-                                                    Layout Tool having Rules
+                                                                                      Input File(.sp)
 
-                                                             ||
-                                                             ||
-                                                             ||
-                                                             \/
-                                                     Layout (.mag, .gds)
+                                                                                           ||
+                                                                                           ||
+                                                                                           ||
+                                                                                           \/
+                                                                                  Layout Tool having Rules
+
+                                                                                           ||
+                                                                                           ||
+                                                                                           ||
+                                                                                           \/
+                                                                                   Layout (.mag, .gds)
 
 ````
 
-## 2. Steps Involved :
+## 2. STEPS INVOLVED:
 
 - Installing Necessary Tools and Softwares
 - Creating a Virtual Envionment
@@ -44,7 +44,7 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 - Generating the Output file
 
 
-## 3. Downloading Our Requirements 
+## 3. DOWNLOADING OUR REQUIREMENTS: 
 
 __For Ubuntu:__
 
@@ -126,7 +126,7 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
  
 The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  <br>__For Example:__
  ```
- lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/MyProjects/LATCH/librecell_tech.py --netlist /home/user/Desktop/MyProjects/LATCH.sp --cell LATCH
+ lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/LATCH/librecell_tech.py --netlist /home/user/Desktop/LATCH.sp --cell LATCH
  ```
  
  ## MAGIC LAYOUT:  
@@ -143,6 +143,6 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
-## 6. About Author:
+## 6. ABOUT AUTHOR:
  `Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
  E-mail:- `soapmactevis1@gmail.com`
