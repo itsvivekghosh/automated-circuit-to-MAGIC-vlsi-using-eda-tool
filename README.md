@@ -167,3 +167,4 @@ Next we need to deal with actual files that is spice netlist files, tech files, 
  - Philipp Guhring, Software Architect at Libresilicon Association. pg@futureware.at
  - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalpghosh@gmail.com
  - Dr. Gaurav Trivedi, Co-principal & Associative Professor, EEE Department, IIT Guwahati. trivedi@iitg.ac.in
+# automated-circuit-to-MAGIC-vlsi-using-eda-tool
