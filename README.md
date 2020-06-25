@@ -1,8 +1,8 @@
 # Automated_Circuit_To_MAGIC_VLSI
-__Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by IIT Guwahati.<br>
+__Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by __IITG, Guwahati__.<br>
 <i>This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. </i>
 
-<h3>About MAGIC Layout Tool:</h3>
+<h3>About MAGIC Layout Tool: </h3>
 <p>MAGIC is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow. </p>
 
 Basically if we are representing a circuit into code format then using some coding algorithm we can implement its magic VLSI layout.
@@ -10,8 +10,9 @@ So, here circuit netlist,design rules, librecell layout are used to generate out
 
 __Working:__
 
-Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)
-
+<h4>
+__Input File  =====>   Layout Tool having Rules  ====>  Layout (.mag, .gds)__
+</h4>
 
 __Steps Involved :__
 
@@ -123,24 +124,22 @@ We need to make a seperate directory for librecell folder if not present else we
  Checkpoint 3 : To make sure MAGIC is installed make a file of magic using `magic checkpoint3.mag`
  If MAGIC with blank project is opened then MAGIC is installed.
  
- __1. AND2X1 : I have used AND2X1 Sspice netlist & cell to generate layout of AND2X1.__
+ __1. AND2X1 : I have used AND2X1 Spice Netlist & cell to generate layout of AND2X1.__
  
  Use command to generate layout 
  
  ```
  magic AND2X1.mag
- 
  ```
  
  Output AND2X1 :
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/Output_AND2X1_SS.png">
  
- __2. LATCH : I have used LATCH spice netlist & cell name to generate layout of LATCH.__
+ __2. LATCH : I have used LATCH Spice Netlist & cell name to generate layout of LATCH.__
  
  ```
  magic LATCH.mag
- 
  ```
  
  Output LATCH:
