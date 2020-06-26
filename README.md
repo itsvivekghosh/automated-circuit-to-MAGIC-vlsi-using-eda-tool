@@ -9,14 +9,33 @@ __Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA T
 __Our Task:__
 Our Task is to generate a VLSI Layout as an Output when given any Input Circuit. We can use Netlist, DRS files, LibreCell layouts as inputs to the file thus generating a VLSI Layout using the Algorithm.
 
-__Working:__
+# TABLE OF CONTENT:
+1. Working
+2. Steps Involved
+3. Downloading Our Requirements.
+4. Getting Into Process.
+5. Conversion Commands.
+6. About Author.
 
-<h4>
-Input File(.sp)  =====>  Layout Tool having Rules  ====>  Layout (.mag, .gds)
-</h4>
+## 1. WORKING PROCESS:
+```
+                                                                    Input File(.sp)
 
+                                                                         ||
+                                                                         ||
+                                                                         ||
+                                                                         \/
+                                                                Layout Tool having Rules
 
-__Steps Involved :__
+                                                                         ||
+                                                                         ||
+                                                                         ||
+                                                                         \/
+                                                                 Layout (.mag, .gds)
+
+````
+
+## 2. STEPS INVOLVED:
 
 - Installing Necessary Tools and Softwares
 - Creating a Virtual Envionment
@@ -25,7 +44,7 @@ __Steps Involved :__
 - Generating the Output file
 
 
-## Downloading Our Requirements 
+## 3. DOWNLOADING OUR REQUIREMENTS: 
 
 __For Ubuntu:__
 
@@ -45,7 +64,7 @@ Install MAGIC Tool using:
 sudo apt-get install magic
 ```
 
-## GETTING INTO PROCESS:
+## 4. GETTING INTO PROCESS:
 
 __Setting up the Virtual Envirnment:__<br>
 Using commands we set up the virtual environment<br>
@@ -94,19 +113,20 @@ Verify LibreCell is Properly Installed or Not by using:
 For more details for installing please visit <a href="https://codeberg.org/tok/librecell#:~:text=Installing%20from%20git&text=Install%20from%20git%3A,setup.py%20develop%20cd%20..">this</a> Link
 
 <h3>Make a Project Directory by using:</h3>
- 'mkdir /myProject'
+
+ `mkdir/myProject`
  
  
- ## CONVERSION COMMAND:
+ ## 5. CONVERSION COMMANDS:
  
  The Running Command Can be used as:
  ```
  lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
  ````
  
-The LATCH.sp file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  __For Example:__
+The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  <br>__For Example:__
  ```
- lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/MyProjects/LATCH/librecell_tech.py --netlist /home/user/Desktop/MyProjects/LATCH.sp --cell LATCH
+ lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/LATCH/librecell_tech.py --netlist /home/user/Desktop/LATCH.sp --cell LATCH
  ```
  
  ## MAGIC LAYOUT:  
@@ -123,6 +143,6 @@ The LATCH.sp file is used as an Spice NetList input file. Bu using `--cell LATCH
  
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH.png">
  
-__@About Author:__<br>
- <p>Vivek Kumar Ghosh, B.Tech (Computer Science Engineering), Uttaranchal University, Dehradun. 
- E-mail:- soapmactevis1@gmail.com</p>
+## 6. ABOUT AUTHOR:
+ `Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
+ E-mail:- `soapmactevis1@gmail.com`
