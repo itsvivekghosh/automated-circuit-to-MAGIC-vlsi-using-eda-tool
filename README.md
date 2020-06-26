@@ -19,19 +19,19 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 
 ## 1. WORKING PROCESS:
 ```
-                                                                    Input File(.sp)
+                                                Input File(.sp)
 
-                                                                         ||
-                                                                         ||
-                                                                         ||
-                                                                         \/
-                                                                Layout Tool having Rules
+                                                     ||
+                                                     ||
+                                                     ||
+                                                     \/
+                                            Layout Tool having Rules
 
-                                                                         ||
-                                                                         ||
-                                                                         ||
-                                                                         \/
-                                                                 Layout (.mag, .gds)
+                                                     ||
+                                                     ||
+                                                     ||
+                                                     \/
+                                             Layout (.mag, .gds)
 
 ````
 
