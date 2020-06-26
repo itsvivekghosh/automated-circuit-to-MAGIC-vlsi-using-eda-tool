@@ -1,6 +1,6 @@
 # Automated Circuit to MAGIC VLSI using Open-Source EDA Tools by Python.
 
-__Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by __IITG, Guwahati__.<br>
+__Project Name:__ Automated Circuit To MAGIC VLSI layout Using Open Source EDA Tools by __ E&ICT IIT, Guwahati__.<br>
 <i>This project aims to convert a circuit into its MAGIC Layout format using a circuit as an input. </i>
 
 <h3>About MAGIC Layout Tool: </h3>
@@ -19,19 +19,19 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 
 ## 1. WORKING PROCESS:
 ```
-                                                Input File(.sp)
+                                                    Input File(.sp)
 
-                                                     ||
-                                                     ||
-                                                     ||
-                                                     \/
-                                            Layout Tool having Rules
+                                                         ||
+                                                         ||
+                                                         ||
+                                                         \/
+                                                Layout Tool having Rules
 
-                                                     ||
-                                                     ||
-                                                     ||
-                                                     \/
-                                             Layout (.mag, .gds)
+                                                         ||
+                                                         ||
+                                                         ||
+                                                         \/
+                                                 Layout (.mag, .gds)
 
 ````
 
@@ -69,6 +69,7 @@ lclayout --h
 ```
 ```
 ngspice
+
 z3
 ```
 
@@ -129,19 +130,26 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
 
 <h3>Make a Project Directory by using:</h3>
 
- `mkdir/myProject`
+ `mkdir/myProjects`
  
  
  ## 5. CONVERSION COMMANDS:
  
  The Running Command Can be used as:
  ```
- lclayout --output-dir [Output Directory] --tech [design_file.py] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
+ lclayout --output-dir [Output Directory] --tech [.py file] --netlist [Spice_Netlist_file.sp] --cell [Cell_Name]
  ````
  
-The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LATCH` command to run the file.  <br>__For Example:__
+ __Explanation__:
+ 1. `lclayout`: initializes the tool.
+ 2. `--output-dir [Output-Directory]` : the directory where we want out output.
+ 3. `--tech [.py file]`: The Algoritm Python file Path.
+ 4. `--netlist [Spice Netlist File.sp]`: NetList File Path
+ 5. `--cell [Cell Name]`: Cell Name
+ 
+The `LATCH.sp` file is used as an Spice NetList Input file. Use `--cell LATCH` command as the Cell.  <br>__For Example:__
  ```
- lclayout --output-dir /home/user/MyProjects --tech /home/user/Desktop/LATCH/librecell_tech.py --netlist /home/user/Desktop/LATCH.sp --cell LATCH
+ lclayout --output-dir /home/user/MyProjects --tech /home/user/MyProjects/LATCH/librecell_tech.py --netlist /home/user/MyProjects/LATCH.sp --cell LATCH
  ```
  
  ## MAGIC LAYOUT:  
@@ -159,7 +167,7 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH1.png">
  
 ## 6. ABOUT AUTHOR:
- `Vivek Kumar Ghosh`, <br>
+ Vivek Kumar Ghosh, <br>
  B.Tech (Computer Science Engineering), <br>
- `Uttaranchal University, Dehradun`. <br>
- E-mail:- `soapmactevis1@gmail.com`
+ Uttaranchal University, Dehradun. <br>
+ E-mail:- soapmactevis1@gmail.com
