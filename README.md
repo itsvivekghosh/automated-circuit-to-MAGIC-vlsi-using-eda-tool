@@ -39,7 +39,7 @@ Our Task is to generate a VLSI Layout as an Output when given any Input Circuit.
 
 - Installing Necessary Tools and Softwares
 - Creating a Virtual Envionment
-- Installing LibreCell Tool using git Command and MAGIC Tool
+- Installing MAGIC Tool and LibreCell Tool using git Command 
 - Applying DRC Rules
 - Generating the Output file
 
