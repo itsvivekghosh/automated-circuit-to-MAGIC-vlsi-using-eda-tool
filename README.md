@@ -63,6 +63,21 @@ Install MAGIC Tool using:
 ```
 sudo apt-get install magic
 ```
+Before Running Please make sure you have successfully installed `NgSpice` and `lclayout`. if you have successfully installed these two tools then run the following commands:
+```
+lclayout --h
+```
+```
+ngspice
+z3
+```
+
+Then the output could be something like this:
+
+<img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/lclayout%20-%20-h.png">
+
+<img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/ngspice_z3.png">
+
 
 ## 4. GETTING INTO PROCESS:
 
@@ -107,10 +122,10 @@ python3 setup.py develop
 
 cd ..
 ```
-Verify LibreCell is Properly Installed or Not by using:
+Verify LibreCell is Properly Installed or Not by using (as discussed above):
 `librecell --h`
 
-For more details for installing please visit <a href="https://codeberg.org/tok/librecell#:~:text=Installing%20from%20git&text=Install%20from%20git%3A,setup.py%20develop%20cd%20..">this</a> Link
+For more details for installing please visit <a href="https://codeberg.org/tok/librecell#:~:text=Installing%20from%20git&text=Install%20from%20git%3A,setup.py%20develop%20cd%20..">this</a> link
 
 <h3>Make a Project Directory by using:</h3>
 
@@ -144,5 +159,7 @@ The `LATCH.sp` file is used as an Spice NetList input file. Bu using `--cell LAT
  <img src ="https://github.com/itsvivekghosh/automated-circuit-to-MAGIC-vlsi-using-eda-tool/blob/master/Images/LATCH1.png">
  
 ## 6. ABOUT AUTHOR:
- `Vivek Kumar Ghosh`, B.Tech (Computer Science Engineering), `Uttaranchal University, Dehradun`. </br>
+ `Vivek Kumar Ghosh`, <br>
+ B.Tech (Computer Science Engineering), <br>
+ `Uttaranchal University, Dehradun`. <br>
  E-mail:- `soapmactevis1@gmail.com`
