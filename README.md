@@ -141,11 +141,11 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
  ````
  
  __Explanation__:
- 1. lclayout: initializes the tool.
- 2. --output-dir [Output-Directory] : the directory where we want out output.
- 3. --tech [.py file]: The Algoritm Python file Path.
- 4. --netlist [Spice_Netlist_file.sp]: NetList File Path
- 5. --cell [Cell_Name]: Cell Name
+ 1. `lclayout`: initializes the tool.
+ 2. `--output-dir [Output-Directory]` : the directory where we want out output.
+ 3. `--tech [.py file]`: The Algoritm Python file Path.
+ 4. `--netlist [Spice Netlist File.sp]`: NetList File Path
+ 5. `--cell [Cell Name]`: Cell Name
  
 The `LATCH.sp` file is used as an Spice NetList Input file. Use `--cell LATCH` command as the Cell.  <br>__For Example:__
  ```
