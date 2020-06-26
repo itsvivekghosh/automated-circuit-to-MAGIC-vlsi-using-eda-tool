@@ -149,7 +149,7 @@ For more details for installing please visit <a href="https://codeberg.org/tok/l
  
 The `LATCH.sp` file is used as an Spice NetList Input file. Use `--cell LATCH` command as the Cell.  <br>__For Example:__
  ```
- lclayout --output-dir /home/user/MyProjects --tech /home/user/MyProjects/LATCH/librecell_tech.py --netlist /home/user/MyProjects/LATCH.sp --cell LATCH
+ lclayout --output-dir /home/user/myProjects --tech /home/user/MyProjects/LATCH/librecell_tech.py --netlist /home/user/myProjects/LATCH.sp --cell LATCH
  ```
  
  ## MAGIC LAYOUT:  
